@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Adaptador para desplegar imagen del contrato con propiedades de zoom y deslizar-->
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/adaptadorFotosContrato"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/etObservacionImagen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Observación"
+        android:layout_margin="16dp"
+        android:enabled="false"
+        android:layout_below="@+id/adaptadorFotosContrato"/>
+
+</RelativeLayout>

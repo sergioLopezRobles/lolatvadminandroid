@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Producto:"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:lines="1"
+            android:layout_weight="1"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spProductoAlertDialog"
+            android:maxLines="1"
+            android:lines="1"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Precio:"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:lines="1"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:id="@+id/etPrecioProductoAlertDialog"
+            android:inputType="text"
+            android:hint="Precio"
+            android:maxLines="1"
+            android:lines="1"
+            android:layout_weight="1"
+            android:maxLength="30"
+            android:enabled="false"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/llPrecioPromocion"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Precio Promocion:"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:lines="1"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:id="@+id/etPrecioProductoPromocionAlertDialog"
+            android:inputType="text"
+            android:hint="Precio Promocion"
+            android:maxLines="1"
+            android:lines="1"
+            android:layout_weight="1"
+            android:maxLength="30"
+            android:enabled="false"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Piezas disponibles:"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:lines="1"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:id="@+id/etPiezasProductoAlertDialog"
+            android:inputType="text"
+            android:hint="Piezas disponibles"
+            android:maxLines="1"
+            android:lines="1"
+            android:layout_weight="1"
+            android:maxLength="10"
+            android:enabled="false"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:background="#EEEEEE">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Número de piezas:"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:lines="1"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:id="@+id/etNumPiezasProductoAlertDialog"
+            android:inputType="number"
+            android:hint="Piezas"
+            android:maxLines="1"
+            android:lines="1"
+            android:layout_weight="1"
+            android:maxLength="3"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:id="@+id/llAplicarFolioPoliza"
+        android:visibility="gone">
+
+        <CheckBox
+            android:id="@+id/cbAplicarPoliza"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aplicar poliza"
+            android:focusable="true"
+            android:maxLines="1"
+            android:lines="1"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:id="@+id/etFolioPoliza"
+            android:inputType="text"
+            android:hint="Folio poliza"
+            android:maxLines="1"
+            android:lines="1"
+            android:layout_weight="1"
+            android:maxLength="20"
+            android:layout_marginRight="10dp"
+            android:enabled="false"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvAutorizacionArmazon"
+        android:text="Se tiene una solicitud de armazon pendiente"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="#FFACA6"
+        android:paddingTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:visibility="gone"/>
+
+</LinearLayout>

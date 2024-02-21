@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="all" android:id="@+id/groupPrimero">
+        <item android:id="@+id/item_todos"
+            android:title="Todos" />
+    </group>
+
+    <group android:checkableBehavior="all" android:id="@+id/groupSegundo">
+        <item android:id="@+id/item_lunes"
+            android:title="Lunes" />
+        <item android:id="@+id/item_martes"
+            android:title="Martes" />
+        <item android:id="@+id/item_miercoles"
+            android:title="Miercoles" />
+        <item android:id="@+id/item_jueves"
+            android:title="Jueves" />
+        <item android:id="@+id/item_viernes"
+            android:title="Viernes" />
+        <item android:id="@+id/item_sabado"
+            android:title="Sabado" />
+        <item android:id="@+id/item_domingo"
+            android:title="Domingo" />
+    </group>
+
+    <group android:checkableBehavior="all" android:id="@+id/groupTercero">
+        <item android:id="@+id/item_contado"
+            android:title="Contado" />
+        <item android:id="@+id/item_semanal"
+            android:title="Semanal" />
+        <item android:id="@+id/item_quincenal"
+            android:title="Quincenal" />
+        <item android:id="@+id/item_mensual"
+            android:title="Mensual" />
+    </group>
+
+    <group android:checkableBehavior="all" android:id="@+id/groupCuarto">
+        <item android:id="@+id/item_generalruta"
+            android:title="R - General" />
+        <item android:id="@+id/item_lunesruta"
+            android:title="R - Lunes" />
+        <item android:id="@+id/item_martesruta"
+            android:title="R - Martes" />
+        <item android:id="@+id/item_miercolesruta"
+            android:title="R - Miercoles" />
+        <item android:id="@+id/item_juevesruta"
+            android:title="R - Jueves" />
+        <item android:id="@+id/item_viernesruta"
+            android:title="R - Viernes" />
+        <item android:id="@+id/item_sabadoruta"
+            android:title="R - Sabado" />
+        <item android:id="@+id/item_domingoruta"
+            android:title="R - Domingo" />
+    </group>
+
+</menu>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vista.buzon">
+
+
+    <!--llComponentes para buzon de quejasy sugerencias-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buzón de quejas y/o sugerencias."
+            android:textColor="#0AA09E"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            />
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Escribir mensaje."
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:paddingTop="20dp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvCaracteresDisponibles"
+                android:text="(0/1000)"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:paddingTop="20dp"
+                android:textAlignment="textEnd"
+                android:paddingRight="10dp"
+                android:layout_weight="1"
+                />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etNuevaQuejaSugerencia"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:inputType="textMultiLine"
+            android:maxLength="1000"
+            android:hint="Describe tu queja y/o sugerencia"
+            android:gravity="top"/>
+
+    </LinearLayout>
+
+    <!-- Botones  -->
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/llBontones"
+        android:background="#000000">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:textSize="15dp"
+            android:textColor="#ffffff"
+            android:id="@+id/btnCancelarNuevaQuejaSugerencia"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aceptar"
+            android:textSize="15dp"
+            android:textColor="#5C5C5C"
+            android:id="@+id/btnGuardarNuevaQuejaSugerencia"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+    <!-- Fin Botones  -->
+
+</RelativeLayout>

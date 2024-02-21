@@ -1,0 +1,2697 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vista.verContrato">
+
+    <!-- ScrollView  -->
+    <ScrollView
+        android:id="@+id/svScrollPrincipal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:visibility="visible"
+        android:layout_above="@+id/llBotones">
+
+        <!-- LinearLayout Principal  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <!-- Lista Historiales 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/llHistorialesClinicos2"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Historiales Clínicos"
+                        android:textColor="#0AA09E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:id="@+id/tvHistorialesClinicosEncabezado2"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="#EEEEEE"
+                    android:id="@+id/llListaHistoriales2"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tvDiagnosticoEncabezado2"
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Diagnóstico"
+                        android:textSize="15sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvFechaVisitaEncabezado2"
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fecha visita"
+                        android:textSize="15sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvFechaEntregaEncabezado2"
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fecha entrega"
+                        android:textSize="15sp"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="170px"
+                    android:id="@+id/lvHistorialesClinicos2"
+                    android:layout_below="@+id/llListaHistoriales2" />
+
+                <!-- Division 4  -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="3dp"
+                    android:background="#0AA09E"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"/>
+                <!-- Fin Division 4  -->
+
+            </LinearLayout>
+            <!-- Termina Lista Historiales 2  -->
+
+            <!-- Lista de contratos cercanos al actual abierto-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/llListaContratosCercanos"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Contratos cercanos"
+                        android:textColor="#0AA09E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="#EEEEEE"
+                    android:id="@+id/llListaContratosCercanosEncabezados"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Contrato"
+                        android:textSize="15sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Calle"
+                        android:textSize="15sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Numero"
+                        android:textSize="15sp"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:id="@+id/lvContratosCercanos"
+                    android:nestedScrollingEnabled="true"
+                    android:scrollbars="none"
+                    android:layout_below="@+id/llListaContratosCercanosEncabezados" />
+
+                <!-- Division 4  -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="3dp"
+                    android:background="#0AA09E"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"/>
+                <!-- Fin Division 4  -->
+
+            </LinearLayout>
+            <!-- Termina lista contratos cercas al actual -->
+
+            <!-- Texto Contrato  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tvTextoContrato"
+                        android:text="Contrato"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#0AA09E"
+                        android:maxLines="1"
+                        android:lines="1" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ic_location_azul"
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/ivIconoUbicacion" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ic_nota"
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/ivIconoNotaRegistroImprimir"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tvEstadoContrato"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- Termina Texto Contrato  -->
+
+            <!--  # Contrato y Fecha de creación  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="# Contrato"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="#5C5A5A"
+                        android:id="@+id/etNumeroContrato"
+                        android:enabled="true"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:focusable="false"
+                        android:longClickable="false"
+                        android:cursorVisible="false"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fecha de creación"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="#5C5A5A"
+                        android:id="@+id/etFechaCreacionContrato"
+                        android:enabled="false"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina # Contrato y Fecha de creación  -->
+
+            <!--  Saldo y Creador  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:id="@+id/llTotalReal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Total"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="#5C5A5A"
+                        android:id="@+id/etTotalReal"
+                        android:enabled="false"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Saldo"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="#5C5A5A"
+                        android:id="@+id/etSaldoContrato"
+                        android:enabled="false"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:id="@+id/llCreadorContrato">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Creador"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="#5C5A5A"
+                        android:id="@+id/etCreadorContrato"
+                        android:enabled="false"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Saldo y Creador  -->
+
+            <!--  Nombre Paquete  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:id="@+id/llNombrePaquete"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Paquete"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="#5C5A5A"
+                        android:id="@+id/etNombrePaqueteContrato"
+                        android:enabled="false"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:id="@+id/llFechaCobroIniFechaCobroFinContrato"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Periodo"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="#5C5A5A"
+                        android:id="@+id/etFechaCobroIniFechaCobroFinContrato"
+                        android:enabled="false"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Nombre Paquete  -->
+
+            <!--  Optometrista asignado  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:id="@+id/llOptometristaAsignado">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Optometrista asignado"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="#5C5A5A"
+                        android:id="@+id/etOptometristaAsignado"
+                        android:enabled="false"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Optometrista asignado  -->
+
+            <!--  Cliente  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cliente"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="#5C5A5A"
+                        android:id="@+id/etClienteContrato"
+                        android:enabled="false"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Cliente  -->
+
+            <!--  Alias  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Alias/Apodo"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="#5C5A5A"
+                        android:id="@+id/etAliasContrato"
+                        android:enabled="false"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Alias  -->
+
+            <!--  Teléfono  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Teléfono"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="#5C5A5A"
+                        android:id="@+id/etTelefonoContrato"
+                        android:enabled="true"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:focusable="false"
+                        android:longClickable="false"
+                        android:cursorVisible="false"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Teléfono  -->
+
+            <!--  Nombre y Teléfono referencia  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:id="@+id/llNombreTelefonoReferencia"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre referencia"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="#5C5A5A"
+                        android:id="@+id/etNombreReferenciaContrato"
+                        android:enabled="false"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Teléfono referencia"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="#5C5A5A"
+                        android:id="@+id/etTelefonoReferenciaContrato"
+                        android:enabled="true"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:focusable="false"
+                        android:longClickable="false"
+                        android:cursorVisible="false"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Nombre y Teléfono referencia  -->
+
+            <!--  Titulo promocion  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:id="@+id/llTituloPromocion"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Promoción"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="#5C5A5A"
+                        android:id="@+id/etTituloPromocionContrato"
+                        android:enabled="false"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Titulo promocion  -->
+
+            <!--Select Lugar de entrega Producto -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:id="@+id/llLugarEntregaProducto"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:text="Lugar de entrega seleccionado:"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"/>
+
+                    <Spinner
+                        android:id="@+id/spLugarEntregaProducto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:enabled="false" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- Termina Select de lugar de entrega Producto -->
+
+            <!--  Lugar venta  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:id="@+id/llLugarVenta"
+                android:visibility="gone">
+
+                <!-- Division 1  -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="#0AA09E"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"/>
+                <!-- Fin Division 1  -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Lugar de venta"
+                    android:textColor="#0AA09E"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+            <!--  Termina Lugar venta  -->
+
+            <!--  Calle  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:id="@+id/llCalle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Calle"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="#5C5A5A"
+                        android:id="@+id/etCalleContrato"
+                        android:enabled="false"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Calle  -->
+
+            <!--  Entre calles  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:id="@+id/llEntreCalles"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Entre calles"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="#5C5A5A"
+                        android:id="@+id/etEntreCallesContrato"
+                        android:enabled="false"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Entre calles  -->
+
+            <!--  Numero y Colonia  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:id="@+id/llNumeroDepartamentoColonia">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Número"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="#5C5A5A"
+                        android:id="@+id/etNumero"
+                        android:enabled="false"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:id="@+id/llDepartamentoContrato">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Departamento"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:maxLines="1"
+                            android:lines="1"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textColor="#5C5A5A"
+                            android:id="@+id/etDepartamentoContrato"
+                            android:enabled="false"
+                            android:maxLines="1"
+                            android:lines="1"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Colonia"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#5C5A5A"
+                        android:id="@+id/etColoniaContrato"
+                        android:enabled="false" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Numero y Colonia  -->
+
+            <!--  Localidad y Color de la casa  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:id="@+id/llLocalidadColorCasa">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Localidad"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="#5C5A5A"
+                        android:id="@+id/etLocalidadContrato"
+                        android:enabled="false"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Color de la casa"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#5C5A5A"
+                        android:id="@+id/etColorCasaContrato"
+                        android:enabled="false"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Localidad y Color de la casa  -->
+
+            <!--  Al lado de  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:id="@+id/llAlLadoDe"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Al lado de"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="#5C5A5A"
+                        android:id="@+id/etAlLadoDeContrato"
+                        android:enabled="false"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Al lado de  -->
+
+            <!--  Frente a  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:id="@+id/llFrenteA"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Frente a"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="#5C5A5A"
+                        android:id="@+id/etFrenteAContrato"
+                        android:enabled="false"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Frente a  -->
+
+            <!--  Linear Layout Lugar entrega  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/llLugarEntrega"
+                android:visibility="gone">
+
+                <!--  Lugar entrega  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp">
+
+                    <!-- Division 2  -->
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="2dp"
+                        android:background="#0AA09E"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"/>
+                    <!-- Fin Division 2  -->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Lugar de cobranza"
+                        android:textColor="#0AA09E"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"/>
+
+                </LinearLayout>
+                <!--  Termina Lugar entrega  -->
+
+                <!--  Calle Entrega  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Calle"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:maxLines="1"
+                            android:lines="1"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textColor="#5C5A5A"
+                            android:id="@+id/etCalleContratoEntrega"
+                            android:enabled="false"
+                            android:maxLines="1"
+                            android:lines="1"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--  Termina Calle  -->
+
+                <!--  Entre calles  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Entre calles"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:maxLines="1"
+                            android:lines="1"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#5C5A5A"
+                            android:id="@+id/etEntreCallesContratoEntrega"
+                            android:enabled="false"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--  Termina Entre calles  -->
+
+                <!--  Numero y Colonia  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Número"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:maxLines="1"
+                                android:lines="1"/>
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:textColor="#5C5A5A"
+                                android:id="@+id/etNumeroEntrega"
+                                android:enabled="false"
+                                android:maxLines="1"
+                                android:lines="1"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Departamento"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:maxLines="1"
+                                android:lines="1"/>
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:textColor="#5C5A5A"
+                                android:id="@+id/etDepartamentoContratoEntrega"
+                                android:enabled="false"
+                                android:maxLines="1"
+                                android:lines="1"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Colonia"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:maxLines="1"
+                            android:lines="1"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#5C5A5A"
+                            android:id="@+id/etColoniaContratoEntrega"
+                            android:enabled="false" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--  Termina Numero y Colonia  -->
+
+                <!--  Localidad y Color de la casa  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Localidad"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:maxLines="1"
+                            android:lines="1"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textColor="#5C5A5A"
+                            android:id="@+id/etLocalidadContratoEntrega"
+                            android:enabled="false"
+                            android:maxLines="1"
+                            android:lines="1"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Color de la casa"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:maxLines="1"
+                            android:lines="1"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#5C5A5A"
+                            android:id="@+id/etColorCasaContratoEntrega"
+                            android:enabled="false"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--  Termina Localidad y Color de la casa  -->
+
+                <!--  Al lado de  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Al lado de"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:maxLines="1"
+                            android:lines="1"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textColor="#5C5A5A"
+                            android:id="@+id/etAlLadoDeContratoEntrega"
+                            android:enabled="false"
+                            android:maxLines="1"
+                            android:lines="1"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--  Termina Al lado de  -->
+
+                <!--  Frente a  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Frente a"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:maxLines="1"
+                            android:lines="1"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textColor="#5C5A5A"
+                            android:id="@+id/etFrenteAContratoEntrega"
+                            android:enabled="false"
+                            android:maxLines="1"
+                            android:lines="1"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--  Termina Frente a  -->
+
+            </LinearLayout>
+            <!--  Termina Linear Layout Lugar entrega  -->
+
+            <!--  llBtnMostrarFotoCasaContrato  -->
+            <LinearLayout
+                android:id="@+id/llBtnMostrarFotoCasaContrato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Fotos"
+                    android:textColor="#0AA09E"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!--Linear Layou para botones-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <!--Linear Layou para Boton Ver fachada-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingRight="5dp">
+
+                        <TextView
+                            android:id="@+id/btnMostrarFotoCasaContrato"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/botonredondo"
+                            android:paddingTop="7dp"
+                            android:paddingBottom="7dp"
+                            android:text="Ver fachada"
+                            android:textAlignment="center"
+                            android:textColor="#ffffff"
+                            android:textSize="20dp" />
+
+                    </LinearLayout>
+                    <!--Fin boton Ver fachada-->
+
+                    <!--Inicia boton Ver otro-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingLeft="5dp">
+
+                        <TextView
+                            android:id="@+id/btnMostrarFotoOtros"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/botonredondo"
+                            android:paddingTop="7dp"
+                            android:paddingBottom="7dp"
+                            android:text="Ver otro"
+                            android:textAlignment="center"
+                            android:textColor="#ffffff"
+                            android:textSize="20dp" />
+                    </LinearLayout>
+                    <!--Termina ver Foto Otro-->
+
+                </LinearLayout>
+                <!--Fin  Layout para botones-->
+
+                <!-- Linear Layout foto INE -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <!-- Inicia ver Foto ine -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingRight="5dp">
+
+                        <TextView
+                            android:id="@+id/btnMostrarFotoIneContrato"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/botonredondo"
+                            android:paddingTop="7dp"
+                            android:paddingBottom="7dp"
+                            android:text="Ver ine"
+                            android:textAlignment="center"
+                            android:textColor="#ffffff"
+                            android:textSize="20dp" />
+
+                    </LinearLayout>
+                    <!-- Termina ver Foto ine -->
+
+                    <!--Inicia boton Ver pagare-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingLeft="5dp">
+
+                        <TextView
+                            android:id="@+id/btnMostrarFotoPagare"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/botonredondo"
+                            android:paddingTop="7dp"
+                            android:paddingBottom="7dp"
+                            android:text="Ver pagare"
+                            android:textAlignment="center"
+                            android:textColor="#ffffff"
+                            android:textSize="20dp" />
+
+                    </LinearLayout>
+                    <!--Termina ver Foto pagare-->
+
+                </LinearLayout>
+                <!--Fin Layout foto INE-->
+
+            </LinearLayout>
+            <!--  Termina llBtnMostrarFotoCasaContrato  -->
+
+            <!-- Actualizar Foto Pagare  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/llActualizarFotoPagare"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Pagare firmado y con numero de contrato"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#0AA09E"
+                    android:gravity="center"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/ivActualizarFotoPagare"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:scaleType="fitXY"
+                            android:background="@drawable/pagare"
+                            android:backgroundTint="#0AA09E" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:id="@+id/etObservacionActualizarFotoPagare"
+                            android:maxLines="1"
+                            android:hint="OBSERVACION"
+                            android:lines="1"
+                            android:textAlignment="center"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Actualizar"
+                    android:background="@drawable/botonredondo"
+                    android:textColor="#ffffff"
+                    android:id="@+id/btnActualizarFotoPagare"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp" />
+
+            </LinearLayout>
+            <!-- Fin Actualizar Foto Pagare  -->
+
+            <!--Seccion de actualizar foto fachada y registrar movimiento contrato-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <!-- Actualizar Foto Casa -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:id="@+id/llActualizarFotoCasa"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Actualizar Fachada"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="#0AA09E"
+                            android:gravity="center"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/ivActualizarFotoCasa"
+                                    android:layout_width="120dp"
+                                    android:layout_height="120dp"
+                                    android:scaleType="fitXY"
+                                    android:background="@drawable/casa"
+                                    android:backgroundTint="#0AA09E" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Actualizar"
+                            android:background="@drawable/botonredondo"
+                            android:textColor="#ffffff"
+                            android:id="@+id/btnActualizarFotoCasa"
+                            android:layout_weight="1"
+                            android:textSize="20dp"
+                            android:textAlignment="center"
+                            android:paddingTop="7dp"
+                            android:paddingBottom="7dp"
+                            android:layout_marginRight="5dp"/>
+
+                    </LinearLayout>
+                    <!-- Fin Actualizar Foto Casa -->
+
+                    <!-- Agregar movimientos contratos -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:id="@+id/llMovimientoContrato"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Evidencia de contrato"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="#0AA09E"
+                            android:gravity="center"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/ivMovimientoContrato"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:scaleType="fitXY"
+                                    android:background="@drawable/evidencia"
+                                    android:backgroundTint="#0AA09E" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textColor="#5C5A5A"
+                            android:id="@+id/etMovimientoContrato"
+                            android:maxLines="1"
+                            android:hint="OBSERVACIONES"
+                            android:lines="1"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/btnCrearMovimientoContrato"
+                            android:text="Agregar"
+                            android:background="@drawable/botonredondo"
+                            android:textColor="#ffffff"
+                            android:layout_weight="1"
+                            android:textSize="20dp"
+                            android:textAlignment="center"
+                            android:paddingTop="7dp"
+                            android:paddingBottom="7dp"
+                            android:layout_marginLeft="5dp"/>
+
+                    </LinearLayout>
+                    <!-- Fin agregar movimeintos contratos -->
+
+                </LinearLayout>
+            </LinearLayout>
+            <!--Fin de seccion-->
+
+            <!--  SpFormaPago  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:layout_marginTop="20dp"
+                android:id="@+id/llFormaPago">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Forma de pago"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:maxLines="1"
+                    android:lines="1"/>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spFormaPago"
+                    android:maxLines="1"
+                    android:lines="1"/>
+
+                <!-- Tarjeta Pension  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:id="@+id/llTarjetaPension"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Tarjeta Pensión"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:gravity="center"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/ivFotoTarjetaPensionFrente"
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:scaleType="fitXY"
+                                android:background="@drawable/tarjeta"
+                                android:backgroundTint="#0AA09E" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Frente"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/ivFotoTarjetaPensionAtras"
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:scaleType="fitXY"
+                                android:background="@drawable/tarjeta"
+                                android:backgroundTint="#0AA09E" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Atrás"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!-- Fin Tarjeta Pension  -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Agregar"
+                    android:background="@drawable/botonredondo"
+                    android:textColor="#ffffff"
+                    android:id="@+id/btnAgregarFormaPago"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp" />
+
+            </LinearLayout>
+            <!--  Termina SpFormaPago  -->
+
+            <!-- Lista Historiales  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/llHistorialesClinicos">
+
+                <!-- Division 3  -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="3dp"
+                    android:background="#0AA09E"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="30dp"/>
+                <!-- Fin Division 3  -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Historiales Clínicos"
+                        android:textColor="#0AA09E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:id="@+id/tvHistorialesClinicosEncabezado"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nuevo"
+                        android:background="@drawable/botonredondo"
+                        android:textColor="#ffffff"
+                        android:id="@+id/btnNuevoHistorial"
+                        android:layout_weight="1"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="#EEEEEE"
+                    android:id="@+id/llListaHistoriales"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tvDiagnosticoEncabezado"
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Diagnóstico"
+                        android:textSize="15sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvFechaVisitaEncabezado"
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fecha visita"
+                        android:textSize="15sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvFechaEntregaEncabezado"
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fecha entrega"
+                        android:textSize="15sp"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="170px"
+                    android:id="@+id/lvHistorialesClinicos"
+                    android:layout_below="@+id/llListaHistoriales" />
+
+            </LinearLayout>
+            <!-- Termina Lista Historiales  -->
+
+            <!-- Division 5  -->
+            <LinearLayout
+                android:id="@+id/llDivision5"
+                android:layout_width="fill_parent"
+                android:layout_height="3dp"
+                android:background="#0AA09E"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"/>
+            <!-- Fin Division 5  -->
+
+            <!-- Historial movimientos contrato -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/llHistorialMovimientosContrato"
+                android:visibility="gone"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvHistorialMovimientosContrato"
+                    android:text="Historial movimientos contrato"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#0AA09E"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+            <!-- Fin historial movimientos contrato -->
+
+            <!-- Lista llNotaContrato  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/llNotaContrato"
+                android:visibility="gone"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvNotaContrato"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#0AA09E"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+            <!-- Termina llNotaContrato  -->
+
+            <!-- Lista llReportarGarantia  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/llReportarGarantia"
+                android:visibility="gone"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvReportarGarantia"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#ea9999"
+                    android:maxLines="2"
+                    android:lines="2"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+            <!-- Termina llReportarGarantia  -->
+
+            <!-- Lista Promociones  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/llPromociones">
+
+                <!-- Division 4  -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="3dp"
+                    android:background="#0AA09E"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"/>
+                <!-- Fin Division 4  -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Promociones"
+                        android:textColor="#0AA09E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:id="@+id/tvPromocionesEncabezado"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nueva"
+                        android:background="@drawable/botonredondo"
+                        android:textColor="#ffffff"
+                        android:id="@+id/btnNuevaPromocion"
+                        android:layout_weight="1"
+                        android:textSize="20dp"
+                        android:textAlignment="center"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/llListaPromociones"
+                    android:visibility="gone"
+                    android:layout_marginBottom="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="#EEEEEE">
+
+                        <TextView
+                            android:textAlignment="center"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Estado"
+                            android:textSize="15sp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:textAlignment="center"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Titulo"
+                            android:textSize="15sp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:textAlignment="center"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Inicio"
+                            android:textSize="15sp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:textAlignment="center"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Fin"
+                            android:textSize="15sp"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:textAlignment="center"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="15sp"
+                            android:textColor="@color/black"
+                            android:id="@+id/tvEstadoPromocion" />
+
+                        <TextView
+                            android:textAlignment="center"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="15sp"
+                            android:textColor="@color/black"
+                            android:id="@+id/tvTituloPromocion"/>
+
+                        <TextView
+                            android:textAlignment="center"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="15sp"
+                            android:textColor="@color/black"
+                            android:id="@+id/tvInicioPromocion"/>
+
+                        <TextView
+                            android:textAlignment="center"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="15sp"
+                            android:textColor="@color/black"
+                            android:id="@+id/tvFinPromocion"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- Termina Lista Promociones  -->
+
+            <!-- Leyenda de crear promocion oculta  -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Para agregar/activar una promoción debes eliminar los abonos agregados."
+                android:id="@+id/tvPromocionLeyenda"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#ea9999"
+                android:maxLines="2"
+                android:lines="2"
+                android:paddingBottom="7dp"
+                android:textAlignment="center"
+                android:visibility="gone"/>
+            <!-- Fin leyenda de crear promocion oculta  -->
+
+            <!-- Inicia Layout para lista negra -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/llListaNegra"
+                android:visibility="gone"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvListaNegra"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+            <!-- Termina llListaNegra  -->
+
+        </LinearLayout>
+        <!-- Termina LinearLayout Principal  -->
+
+    </ScrollView>
+    <!-- Termina ScrollView  -->
+
+    <!-- LinearLayout Secundario  -->
+    <LinearLayout
+        android:id="@+id/llSecundario"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="10dp"
+        android:layout_above="@+id/llBotones">
+
+        <!-- LinearLayout Saldo2  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Saldo"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:maxLines="1"
+                    android:lines="1"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="#5C5A5A"
+                    android:id="@+id/etSaldoContrato2"
+                    android:enabled="false"
+                    android:maxLines="1"
+                    android:lines="1"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <!-- Termina LinearLayout Saldo2  -->
+
+        <!-- LinearLayout Abonos  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/llAbonos"
+            android:layout_weight="1">
+
+            <!-- Lista Abonos  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/llAbonosSecundario">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Abonos"
+                        android:textColor="#0AA09E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:id="@+id/tvAbonosEncabezado"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nuevo"
+                        android:background="@drawable/botonredondo"
+                        android:textColor="#ffffff"
+                        android:id="@+id/btnNuevoAbono"
+                        android:layout_weight="1"
+                        android:textSize="20dp"
+                        android:textAlignment="center"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/llDiaPago"
+                    android:layout_margin="10dp"
+                    android:visibility="gone">
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spDiaPago"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Aplicar"
+                        android:background="@drawable/botonredondo"
+                        android:textColor="#ffffff"
+                        android:id="@+id/btnAplicarDiaPago"
+                        android:layout_weight="1"
+                        android:textSize="17dp"
+                        android:textAlignment="center"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="#EEEEEE"
+                    android:id="@+id/llListaAbonos"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Abono"
+                        android:textSize="15sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Metodo Pago"
+                        android:textSize="15sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tipo Abono"
+                        android:textSize="15sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fecha"
+                        android:textSize="15sp"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- Termina Lista Abonos  -->
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/lvAbonos"
+                android:layout_below="@+id/llListaAbonos"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+        <!-- Termina LinearLayout Abonos  -->
+
+        <!-- LinearLayout Productos  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:id="@+id/llProductos">
+
+            <!-- Division 5  -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="3dp"
+                android:background="#0AA09E"
+                android:orientation="horizontal" />
+            <!-- Fin Division 5  -->
+
+            <!-- Lista Productos  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/llTvYBtnProductos">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Productos"
+                        android:textColor="#0AA09E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:id="@+id/tvProductosEncabezados"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nuevo"
+                        android:background="@drawable/botonredondo"
+                        android:textColor="#ffffff"
+                        android:id="@+id/btnNuevoProducto"
+                        android:layout_weight="1"
+                        android:textSize="20dp"
+                        android:textAlignment="center"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="#EEEEEE"
+                    android:id="@+id/llListaProductos"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Producto"
+                        android:textSize="15sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Precio"
+                        android:textSize="15sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Piezas"
+                        android:textSize="15sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:textAlignment="center"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Total"
+                        android:textSize="15sp"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- Termina Lista Productos  -->
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/lvProductos"
+                android:layout_below="@+id/llListaProductos"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+        <!-- Termina LinearLayout Productos  -->
+
+    </LinearLayout>
+    <!-- Termina LinearLayout Secundario  -->
+
+    <!-- LinearLayout Botones  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/llBotones"
+        android:background="#000000">
+
+        <!-- Boton MostrarOcultar  -->
+        <Button
+            android:id="@+id/btnMostrarOcultar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mostrar mas"
+            android:textSize="15dp"
+            android:textColor="#ffffff"
+            android:background="#000000"
+            android:layout_weight="1"/>
+        <!-- Termina Boton MostrarOcultar  -->
+
+        <!--  Boton Terminar  -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Terminar Contrato"
+            android:textSize="15dp"
+            android:textColor="#ffffff"
+            android:background="#000000"
+            android:id="@+id/btnTerminarContrato"
+            android:layout_weight="1"/>
+        <!-- Termina Boton Terminar  -->
+
+    </LinearLayout>
+    <!-- Termina LinearLayout Botones  -->
+
+</RelativeLayout>

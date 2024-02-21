@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vista.configuracion">
+
+    <ScrollView
+        android:id="@+id/svConfiguracion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+        <!--  llConfiguracion  -->
+        <LinearLayout
+            android:id="@+id/llConfiguracion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Dispositivo seleccionado"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:layout_margin="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvNombreImpresora"
+                    android:textAlignment="center"
+                    android:text="No hay un dispositivo seleccionado"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFACA6"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:layout_margin="20dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Seleccionar"
+                    android:background="@drawable/botonredondo"
+                    android:textColor="#ffffff"
+                    android:id="@+id/btnSeleccionarImpresora"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp" />
+
+                <!-- Division 1-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#0AA09E"
+                    android:orientation="horizontal" />
+                <!-- Fin Division 1-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvDatosAImprimir"
+                    android:text=""
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <!-- Inicio LinearLayout Botones Corte-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!--Boton para imprimir corte-->
+                    <TextView
+                        android:id="@+id/btnImprimirCorte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/botonredondo"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp"
+                        android:text="Imprimir corte"
+                        android:textAlignment="center"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp" />
+
+                    <!--Fin boton para Imprimir corte-->
+                    <!--Boton para compartir corte-->
+                    <TextView
+                        android:id="@+id/btnCompartirCorte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/botonredondo"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp"
+                        android:text="Compartir corte"
+                        android:textAlignment="center"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp" />
+                    <!--Fin boton para compartir corte-->
+
+                    <!-- Fin LinearLayout Botones Corte-->
+                </LinearLayout>
+
+                <!-- Division 2-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#0AA09E"
+                    android:orientation="horizontal" />
+                <!-- Fin Division 2-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:text="Mapa"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btnDescargarMapa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/botonredondo"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    android:text="Descargar mapa"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+            <!--llFormatoImagenCompartir-->
+            <!--Formato de imagen de corte con logo, corte y fecha-->
+            <LinearLayout
+                android:id="@+id/llFormatoImagenCompartir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+
+                <!--Logotipo - centrado-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:src="@drawable/logo"
+                        android:id="@+id/ivLogo"/>
+                </LinearLayout>
+                <!--Fin de logotipo-->
+
+                <!--Inicia tvDatosCorte-->
+                <TextView
+                    android:id="@+id/tvDatosCorte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+                <!--Termina tvDatosCorte-->
+
+                <!--Inicia tvNombreCobrador-->
+                <TextView
+                    android:id="@+id/tvNombreCobrador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textAlignment="textEnd" />
+                <!--Termina tvNombreCobrador-->
+
+                <!--Inicia tvFechaImagenCorte-->
+                <TextView
+                    android:id="@+id/tvFechaImagenCorte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textAlignment="textEnd" />
+                <!--Termina tvFechaImagenCorte-->
+
+            </LinearLayout>
+            <!--Termina llFormatoImagenCompartir-->
+
+        </LinearLayout>
+        <!--  Termina llConfiguracion  -->
+
+
+    </ScrollView>
+
+</RelativeLayout>

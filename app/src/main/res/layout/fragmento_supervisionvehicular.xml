@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vista.supervisionVehicular">
+
+    <ScrollView
+        android:id="@+id/svNuevaSupervision"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llBontonesSupervision"
+        android:background="#ffffff">
+
+        <!-- LinearLayout Principal  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Imagenes pendientes (0)"
+                android:textAlignment="center"
+                android:textColor="#0AA09E"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:id="@+id/tvFotosPendientesSupervision"
+                />
+
+            <!-- LlFotosSupervision-->
+            <LinearLayout
+                android:id="@+id/llFotosSupervision"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Kilometraje -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:id="@+id/llKilometrajeManana"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/ivKilometrajeManana"
+                                android:layout_width="110dp"
+                                android:layout_height="110dp"
+                                android:background="@drawable/kilometraje"
+                                android:backgroundTint="#0AA09E" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Kilometraje mañana"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvKilometrajeManana"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:lines="1"
+                                android:maxLines="1"
+                                android:text="Sin capturar"
+                                android:textColor="#FFACA6"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:id="@+id/llKilometrajeTarde"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/ivKilometrajeTarde"
+                                android:layout_width="110dp"
+                                android:layout_height="110dp"
+                                android:background="@drawable/kilometraje"
+                                android:backgroundTint="#0AA09E" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Kilometraje tarde"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvKilometrajeTarde"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:lines="1"
+                                android:maxLines="1"
+                                android:text="Sin capturar"
+                                android:textColor="#FFACA6"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!-- Fin Kilometraje -->
+
+                <!-- Lados de vehiculo -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:id="@+id/llFotoLadoIzquierdo"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/ivMotoLadoIzquierdo"
+                                android:layout_width="110dp"
+                                android:layout_height="110dp"
+                                android:background="@drawable/motoizq"
+                                android:backgroundTint="#0AA09E" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Lado izquierdo"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvMotoLadoIzquierdo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:lines="1"
+                                android:maxLines="1"
+                                android:text="Sin capturar"
+                                android:textColor="#FFACA6"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:id="@+id/llFotoLadoDerecho"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/ivMotoLadoDerecho"
+                                android:layout_width="110dp"
+                                android:layout_height="110dp"
+                                android:background="@drawable/motoder"
+                                android:backgroundTint="#0AA09E" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Lado derecho"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvMotoLadoDerecho"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:lines="1"
+                                android:maxLines="1"
+                                android:text="Sin capturar"
+                                android:textColor="#FFACA6"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!-- Fin lados motos -->
+
+                <!-- frente y atras de vehiculo -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:id="@+id/llFotoFrente"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/ivMotoFrente"
+                                android:layout_width="110dp"
+                                android:layout_height="110dp"
+                                android:background="@drawable/motofrente"
+                                android:backgroundTint="#0AA09E" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Frente"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvMotoFrente"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:lines="1"
+                                android:maxLines="1"
+                                android:text="Sin capturar"
+                                android:textColor="#FFACA6"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:id="@+id/llFotoAtras"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/ivMotoAtras"
+                                android:layout_width="110dp"
+                                android:layout_height="110dp"
+                                android:background="@drawable/motoatras"
+                                android:backgroundTint="#0AA09E" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Atras"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvMotoAtras"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:lines="1"
+                                android:maxLines="1"
+                                android:text="Sin capturar"
+                                android:textColor="#FFACA6"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!-- Fin frente y atras vehiculo -->
+
+                <!-- Foto extra 1 y extra 2 de vehiculo -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:id="@+id/llFotoExtra1"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/ivMotoFotoExtra1"
+                                android:layout_width="110dp"
+                                android:layout_height="110dp"
+                                android:background="@drawable/extra"
+                                android:backgroundTint="#0AA09E" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Extra 1"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvMotoFotoExtra1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:lines="1"
+                                android:maxLines="1"
+                                android:text="Sin capturar"
+                                android:textColor="#FFACA6"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:id="@+id/llFotoExtra2"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/ivMotoFotoExtra2"
+                                android:layout_width="110dp"
+                                android:layout_height="110dp"
+                                android:background="@drawable/extra"
+                                android:backgroundTint="#0AA09E" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Extra 2"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvMotoFotoExtra2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:lines="1"
+                                android:maxLines="1"
+                                android:text="Sin capturar"
+                                android:textColor="#FFACA6"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!-- Fin extra 1 y extra 2 vehiculo -->
+
+                <!-- Foto extra 3 y extra 4 de vehiculo -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:id="@+id/llFotoExtra3"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/ivMotoFotoExtra3"
+                                android:layout_width="110dp"
+                                android:layout_height="110dp"
+                                android:background="@drawable/extra"
+                                android:backgroundTint="#0AA09E" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Extra 3"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvMotoFotoExtra3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:lines="1"
+                                android:maxLines="1"
+                                android:text="Sin capturar"
+                                android:textColor="#FFACA6"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:id="@+id/llFotoExtra4"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/ivMotoFotoExtra4"
+                                android:layout_width="110dp"
+                                android:layout_height="110dp"
+                                android:background="@drawable/extra"
+                                android:backgroundTint="#0AA09E" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Extra 4"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvMotoFotoExtra4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:lines="1"
+                                android:maxLines="1"
+                                android:text="Sin capturar"
+                                android:textColor="#FFACA6"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!-- Fin extra 3 y extra 4 vehiculo -->
+
+                <!-- Foto extra 5 y extra 6 de vehiculo -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:id="@+id/llFotoExtra5"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/ivMotoFotoExtra5"
+                                android:layout_width="110dp"
+                                android:layout_height="110dp"
+                                android:background="@drawable/extra"
+                                android:backgroundTint="#0AA09E" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Extra 5"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvMotoFotoExtra5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:lines="1"
+                                android:maxLines="1"
+                                android:text="Sin capturar"
+                                android:textColor="#FFACA6"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:id="@+id/llFotoExtra6"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/ivMotoFotoExtra6"
+                                android:layout_width="110dp"
+                                android:layout_height="110dp"
+                                android:background="@drawable/extra"
+                                android:backgroundTint="#0AA09E" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Extra 6"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvMotoFotoExtra6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:lines="1"
+                                android:maxLines="1"
+                                android:text="Sin capturar"
+                                android:textColor="#FFACA6"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!-- Fin extra 5 y extra 6 vehiculo -->
+
+            </LinearLayout>
+            <!-- Fin LlFotos -->
+
+        </LinearLayout>
+        <!--Fin de llPrincipal-->
+
+    </ScrollView>
+
+    <!-- Botones  -->
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/llBontonesSupervision"
+        android:background="#000000">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:textSize="15dp"
+            android:textColor="#ffffff"
+            android:id="@+id/btnCancelarSupervision"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Crear"
+            android:textSize="15dp"
+            android:textColor="#ffffff"
+            android:id="@+id/btnCrearSupervision"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+    <!-- Fin Botones  -->
+
+</RelativeLayout>

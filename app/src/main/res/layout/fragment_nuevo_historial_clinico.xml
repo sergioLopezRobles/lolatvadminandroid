@@ -1,0 +1,2308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vista.nuevoHistorialClinico">
+
+    <ScrollView
+        android:layout_above="@+id/llBontones2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+        <!-- LinearLayout Principal  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <!--  Nombre  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre del cliente"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etNombreCliente2"
+                        android:inputType="text"
+                        android:hint="Nombre"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="30"
+                        android:enabled="false"
+                        android:textColor="#5C5A5A"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Nombre  -->
+
+            <!-- Division 1   -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="3dp"
+                android:background="#0AA09E"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"/>
+            <!-- Fin Division 1   -->
+
+            <!-- Texto Historial Clínico  -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Historial Clínico"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#0AA09E"
+                    android:gravity="center"
+                    android:id="@+id/tvNuevoHistorialClinico"/>
+
+            </LinearLayout>
+            <!-- Termina Texto Historial Clínico  -->
+
+            <!--  Edad y Diagnostico  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Edad"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etEdadNuevoHistorial2"
+                        android:inputType="number"
+                        android:hint="Edad"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="3"
+                        android:enabled="false"
+                        android:textColor="#5C5A5A"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Diagnostico"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etDiagnosticoNuevoHistorial2"
+                        android:inputType="text"
+                        android:hint="Diagnostico"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="30"
+                        android:enabled="false"
+                        android:textColor="#5C5A5A"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Edad y Diagnostico  -->
+
+            <!--  Ocupación y Diabetes  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ocupación"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etOcupacionNuevoHistorial2"
+                        android:inputType="text"
+                        android:hint="Ocupación"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="30"
+                        android:enabled="false"
+                        android:textColor="#5C5A5A"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Diabetes"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etDiabetesNuevoHistorial2"
+                        android:inputType="text"
+                        android:hint="Diabetes"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="30"
+                        android:enabled="false"
+                        android:textColor="#5C5A5A"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Ocupación y Diabetes  -->
+
+            <!--  Hipertensión y Embarazada  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hipertensión"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etHipertensionNuevoHistorial2"
+                        android:inputType="text"
+                        android:hint="Hipertensión"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="30"
+                        android:enabled="false"
+                        android:textColor="#5C5A5A"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="¿Se encuentra embarazada?"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etEmbarazadaNuevoHistorial2"
+                        android:inputType="text"
+                        android:hint=""
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="50"
+                        android:enabled="false"
+                        android:textColor="#5C5A5A"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Hipertensión y Embarazada  -->
+
+            <!--  Durmio de seis a ocho horas y Actividad dia  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="¿Durmió de 6 a 8 horas?"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etDurmioSeisOchoHorasNuevoHistorial2"
+                        android:inputType="text"
+                        android:hint=""
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="50"
+                        android:enabled="false"
+                        android:textColor="#5C5A5A"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Principal actividad en el día"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etActividadDiaNuevoHistorial2"
+                        android:inputType="text"
+                        android:hint=""
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="50"
+                        android:enabled="false"
+                        android:textColor="#5C5A5A"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Durmio de seis a ocho horas y Actividad dia  -->
+
+            <!--  Principal problema que padece en sus ojos  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Principal problema que padece en sus ojos"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etProblemasOjosNuevoHistorial2"
+                        android:inputType="text"
+                        android:hint=""
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="50"
+                        android:enabled="false"
+                        android:textColor="#5C5A5A"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Principal problema que padece en sus ojos  -->
+
+            <!--  Molestia y Ultimo examen  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Molestia"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <CheckBox
+                        android:id="@+id/cbDolorCabeza2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dolor de cabeza"
+                        android:enabled="false" />
+
+                    <CheckBox
+                        android:id="@+id/cbArdorOjos2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ardor en los ojos"
+                        android:enabled="false"/>
+
+                    <CheckBox
+                        android:id="@+id/cbGolpeCabeza2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Golpe en cabeza"
+                        android:enabled="false" />
+
+                    <CheckBox
+                        android:id="@+id/cbOtroMolestia2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Otro"
+                        android:enabled="false"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etOtroMoletiaNuevoHistorial2"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="30"
+                        android:enabled="false"
+                        android:textColor="#5C5A5A"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ultimo examen"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etUltimoExamenNuevoHistorial2"
+                        android:inputType="date"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:enabled="false"
+                        android:textColor="#5C5A5A"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Molestia y Ultimo examen  -->
+
+            <!-- Division 2  -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="3dp"
+                android:background="#0AA09E"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"/>
+            <!-- Fin Division 2  -->
+
+            <!-- Texto Producto   -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Producto"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#0AA09E"
+                    android:gravity="center"
+                    android:id="@+id/tvProductoNuevoHistorial"/>
+
+            </LinearLayout>
+            <!-- Termina Texto Producto  -->
+
+            <!-- SpProducto  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Armazón: "
+                        android:textSize="13dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spProductoNuevoHistorial2"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Selecciona un producto"
+                    android:id="@+id/tvProductoNuevoHistorial2"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFACA6"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+            <!-- Termina SpProducto  -->
+
+            <!-- Inicia Foto Armazon Propio  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:id="@+id/llFotoArmazonPropioHistorial2"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Foto armazon propio"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#0AA09E"
+                    android:gravity="center"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/ivFotoArmazonPropioHistorial2"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:scaleType="fitXY"
+                            android:background="@drawable/armazonpropio"
+                            android:backgroundTint="#0AA09E" />
+
+                        <TextView
+                            android:id="@+id/tvFotoArmazonPropioHistorial2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:text="Sin capturar"
+                            android:textColor="#FFACA6"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- Fin Foto Armazon Propio  -->
+
+            <!-- SpPaquetes  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Paquetes: "
+                        android:textSize="13dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spPaquetesNuevoHistorial2" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- Termina SpPaquetes  -->
+
+            <!--  Fecha entrega  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fecha entrega"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:id="@+id/etFechaEntregaNuevoHistorial2"
+                        android:hint="aaaa-mm-dd"
+                        android:inputType="date"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Campo vacío"
+                        android:id="@+id/tvFechaEntregaNuevoHistorial2"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFACA6"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Fecha entrega  -->
+
+            <!--  llDatosSinConversionNuevoHistorial2  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/llDatosSinConversionNuevoHistorial2"
+                android:visibility="gone">
+
+                <!-- Texto Sin Conversion   -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Sin conversión"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:textColor="#0AA09E"
+                        android:gravity="center"
+                        android:id="@+id/tvNuevoHistorialSC"/>
+
+                </LinearLayout>
+                <!-- Termina Texto Sin Conversion  -->
+
+                <!-- Texto Visión cercana Sin Conversion   -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/llVisionCercanaSinConversion"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text=""
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#0AA09E"
+                        android:gravity="center"
+                        android:id="@+id/tvVisionCercanaSinConversion"/>
+
+                </LinearLayout>
+                <!-- Termina Texto Visión cercana Sin Conversion   -->
+
+                <!-- Texto Ojo Derecho Sin Conversion   -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Ojo derecho"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#0AA09E"
+                        android:gravity="center"
+                        android:id="@+id/tvOjoDerechoNuevoHistorialSC"/>
+
+                </LinearLayout>
+                <!-- Termina Texto Ojo Derecho Sin Conversion  -->
+
+                <!-- Producto Ojo Derecho Sin Conversion   -->
+                <!-- Esférico y Cilindro Ojo Derecho Sin Conversion  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Esférico"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:maxLines="1"
+                            android:lines="1"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:id="@+id/etOjoDerechoEsfericoSinConversionNuevoHistorial2"
+                            android:inputType="text"
+                            android:hint="Esférico"
+                            android:maxLines="1"
+                            android:lines="1"
+                            android:maxLength="20"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cilindro"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:maxLines="1"
+                            android:lines="1"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:id="@+id/etOjoDerechoCilindroSinConversionNuevoHistorial2"
+                            android:inputType="text"
+                            android:hint="Cilindro"
+                            android:maxLines="1"
+                            android:lines="1"
+                            android:maxLength="20"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--  Termina Esférico y Cilindro Ojo Derecho Sin Conversion   -->
+
+                <!-- Eje y Add Ojo Derecho Sin Conversion  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Eje"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:maxLines="1"
+                            android:lines="1"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:id="@+id/etOjoDerechoEjeSinConversionNuevoHistorial2"
+                            android:inputType="text"
+                            android:hint="Eje"
+                            android:maxLines="1"
+                            android:lines="1"
+                            android:maxLength="20"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Add"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:maxLines="1"
+                            android:lines="1"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:id="@+id/etOjoDerechoAddSinConversionNuevoHistorial2"
+                            android:inputType="text"
+                            android:hint="Add"
+                            android:maxLines="1"
+                            android:lines="1"
+                            android:maxLength="20"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--  Termina Eje y Add Ojo Derecho Sin Conversion   -->
+                <!--  Termina Producto Ojo Derecho Sin Conversion  -->
+
+                <!-- Texto Ojo Izquierdo Sin Conversion  -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Ojo izquierdo"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#0AA09E"
+                        android:gravity="center"
+                        android:id="@+id/tvOjoIzquierdoNuevoHistorialSC"/>
+
+                </LinearLayout>
+                <!-- Termina Texto Ojo Izquierdo Sin Conversion   -->
+
+                <!-- Producto Ojo Izquierdo Sin Conversion   -->
+                <!-- Esférico y Cilindro Ojo Izquierdo Sin Conversion   -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Esférico"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:maxLines="1"
+                            android:lines="1"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:id="@+id/etOjoIzquierdoEsfericoSinConversionNuevoHistorial2"
+                            android:inputType="text"
+                            android:hint="Esférico"
+                            android:maxLines="1"
+                            android:lines="1"
+                            android:maxLength="20"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cilindro"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:maxLines="1"
+                            android:lines="1"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:id="@+id/etOjoIzquierdoCilindroSinConversionNuevoHistorial2"
+                            android:inputType="text"
+                            android:hint="Cilindro"
+                            android:maxLines="1"
+                            android:lines="1"
+                            android:maxLength="20"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--  Termina Esférico y Cilindro Ojo Izquierdo Sin Conversion   -->
+
+                <!-- Eje y Add Ojo Izquierdo Sin Conversion   -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Eje"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:maxLines="1"
+                            android:lines="1"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:id="@+id/etOjoIzquierdoEjeSinConversionNuevoHistorial2"
+                            android:inputType="text"
+                            android:hint="Eje"
+                            android:maxLines="1"
+                            android:lines="1"
+                            android:maxLength="20"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Add"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:maxLines="1"
+                            android:lines="1"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:id="@+id/etOjoIzquierdoAddSinConversionNuevoHistorial2"
+                            android:inputType="text"
+                            android:hint="Add"
+                            android:maxLines="1"
+                            android:lines="1"
+                            android:maxLength="20"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--  Termina Eje y Add Ojo Izquierdo Sin Conversion   -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Porfavor asegurate que los campos esten llenos, si un campo no se necesita agregar un NA"
+                    android:id="@+id/tvGeneralSinConversionNuevoHistorial2"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFACA6"
+                    android:visibility="gone" />
+
+                <!-- Texto Con Conversion   -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Con conversión"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:textColor="#0AA09E"
+                        android:gravity="center"
+                        android:id="@+id/tvNuevoHistorialCC"/>
+
+                </LinearLayout>
+                <!-- Termina Texto Con Conversion  -->
+
+            </LinearLayout>
+            <!--  Termina llDatosSinConversionNuevoHistorial2  -->
+
+            <!-- Texto Visión cercana   -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:id="@+id/llVisionCercana"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#0AA09E"
+                    android:gravity="center"
+                    android:id="@+id/tvVisionCercana"/>
+
+            </LinearLayout>
+            <!-- Termina Texto Visión cercana   -->
+
+            <!-- Texto Ojo Derecho   -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Ojo derecho"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#0AA09E"
+                    android:gravity="center"
+                    android:id="@+id/tvOjoDerechoNuevoHistorialCC"/>
+
+            </LinearLayout>
+            <!-- Termina Texto Ojo Derecho   -->
+
+            <!-- Producto Ojo Derecho   -->
+            <!-- Esférico y Cilindro Ojo Derecho   -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Esférico"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:id="@+id/etOjoDerechoEsfericoNuevoHistorial2"
+                        android:digits="0123456789.-+"
+                        android:hint="Esférico"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="20"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Campo vacío"
+                        android:id="@+id/tvOjoDerechoEsfericoNuevoHistorial2"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFACA6"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cilindro"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:id="@+id/etOjoDerechoCilindroNuevoHistorial2"
+                        android:digits="0123456789.-+"
+                        android:hint="Cilindro"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="20"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Campo vacío"
+                        android:id="@+id/tvOjoDerechoCilindroNuevoHistorial2"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFACA6"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Esférico y Cilindro Ojo Derecho   -->
+
+            <!-- Eje y Add Ojo Derecho   -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Eje"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:id="@+id/etOjoDerechoEjeNuevoHistorial2"
+                        android:inputType="text"
+                        android:hint="Eje"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="20"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Campo vacío"
+                        android:id="@+id/tvOjoDerechoEjeNuevoHistorial2"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFACA6"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Add"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:id="@+id/etOjoDerechoAddNuevoHistorial2"
+                        android:digits="0123456789.-+"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="20"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Campo vacío"
+                        android:id="@+id/tvOjoDerechoAddNuevoHistorial2"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFACA6"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Eje y Add Ojo Derecho   -->
+
+            <!-- ALT Ojo Derecho   -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ALT"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:id="@+id/etOjoDerechoALTNuevoHistorial2"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="20"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Campo vacío"
+                        android:id="@+id/tvOjoDerechoALTNuevoHistorial2"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFACA6"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina ALT Ojo Derecho   -->
+            <!--  Termina Producto Ojo Derecho  -->
+
+            <!-- Texto Ojo Izquierdo   -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Ojo izquierdo"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#0AA09E"
+                    android:gravity="center"
+                    android:id="@+id/tvOjoIzquierdoNuevoHistorialCC"/>
+
+            </LinearLayout>
+            <!-- Termina Texto Ojo Izquierdo   -->
+
+            <!-- Producto Ojo Izquierdo   -->
+            <!-- Esférico y Cilindro Ojo Izquierdo   -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Esférico"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:id="@+id/etOjoIzquierdoEsfericoNuevoHistorial2"
+                        android:digits="0123456789.-+"
+                        android:hint="Esférico"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="20"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Campo vacío"
+                        android:id="@+id/tvOjoIzquierdoEsfericoNuevoHistorial2"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFACA6"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cilindro"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:id="@+id/etOjoIzquierdoCilindroNuevoHistorial2"
+                        android:digits="0123456789.-+"
+                        android:hint="Cilindro"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="20"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Campo vacío"
+                        android:id="@+id/tvOjoIzquierdoCilindroNuevoHistorial2"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFACA6"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Esférico y Cilindro Ojo Izquierdo   -->
+
+            <!-- Eje y Add Ojo Izquierdo   -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Eje"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:id="@+id/etOjoIzquierdoEjeNuevoHistorial2"
+                        android:inputType="text"
+                        android:hint="Eje"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="20"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Campo vacío"
+                        android:id="@+id/tvOjoIzquierdoEjeNuevoHistorial2"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFACA6"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Add"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:id="@+id/etOjoIzquierdoAddNuevoHistorial2"
+                        android:digits="0123456789.-+"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="20"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Campo vacío"
+                        android:id="@+id/tvOjoIzquierdoAddNuevoHistorial2"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFACA6"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Eje y Add Ojo Izquierdo   -->
+
+            <!-- ALT Ojo Izquierdo   -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ALT"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:id="@+id/etOjoIzquierdoALTNuevoHistorial2"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="20"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Campo vacío"
+                        android:id="@+id/tvOjoIzquierdoALTNuevoHistorial2"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFACA6"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina ALT Ojo Izquierdo   -->
+            <!--  Termina Producto Ojo Izquierdo  -->
+
+            <!--  Material y Tratamiento  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Material"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#0AA09E"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:id="@+id/tvMaterialNuevoHistorial"/>
+
+                    <RadioGroup
+                        android:id="@+id/rgMaterialNuevoHistorial2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rbCR2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="CR" />
+
+                        <RadioButton
+                            android:id="@+id/rbHiIndex2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Hi Index" />
+
+                        <RadioButton
+                            android:id="@+id/rbPolicarbonato2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Policarbonato"/>
+
+                        <CheckBox
+                            android:id="@+id/cbPolicarbonatoTipo2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:layout_marginLeft="30dp"
+                            android:text="Adulto"
+                            android:visibility="gone"/>
+
+                        <RadioButton
+                            android:id="@+id/rbOtroMaterial2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Otro" />
+
+                    </RadioGroup>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:id="@+id/etOtroMaterialNuevoHistorial2"
+                        android:inputType="text"
+                        android:hint="Otro"
+                        android:enabled="false"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="20"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Campo vacío"
+                        android:id="@+id/tvOtroMaterialNuevoHistorial2"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFACA6"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:id="@+id/etPrecioMaterialNuevoHistorial2"
+                        android:hint="Precio/Costo"
+                        android:inputType="numberDecimal"
+                        android:enabled="false"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="10"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Campo vacío"
+                        android:id="@+id/tvPrecioMaterialNuevoHistorial2"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFACA6"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tratamiento"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#0AA09E"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:id="@+id/tvTratamientoNuevoHistorial"/>
+
+                    <CheckBox
+                        android:id="@+id/cbTratamientoAR2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:text="A/R" />
+
+                    <CheckBox
+                        android:id="@+id/cbTratamientoBlueray2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:text="BlueRay" />
+
+                    <!--Inicio de cbEspejeado-->
+                    <CheckBox
+                        android:id="@+id/cbTratamientoEspejeado2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:text="Espejo" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:id="@+id/llTratamientoEspejeado2"
+                        android:layout_marginLeft="35dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:text="Color"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+                        <Spinner
+                            android:id="@+id/spColorTratamientoEspejeado2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tvColorTratamientoEspejeado2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:text="Selecciona un color"
+                            android:textColor="#FFACA6"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                    <!--Fin de cbEspejeado-->
+
+                    <CheckBox
+                        android:id="@+id/cbTratamientoFotocromatico2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:text="Fotocromático" />
+
+                    <!--Inicio cbTratamientoPolarizado-->
+                    <CheckBox
+                        android:id="@+id/cbTratamientoPolarizado2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:text="Polarizado" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:id="@+id/llTratamientoPolarizado2"
+                        android:layout_marginLeft="35dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:text="Color"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+                        <Spinner
+                            android:id="@+id/spColorTratamientoPolarizado2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tvColorTratamientoPolarizado2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:text="Selecciona un color"
+                            android:textColor="#FFACA6"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                    <!--Fin de cbTratamientoPolarizado-->
+
+                    <CheckBox
+                        android:id="@+id/cbTratamientoTinte2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:text="Tinte" />
+
+                    <!--Spinner para colores y estilos de tratamiento tinte-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:id="@+id/llColorEstiloTinte2"
+                        android:layout_marginLeft="35dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:text="Color"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+                        <Spinner
+                            android:id="@+id/spColorTratamiento2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tvColorTratamiento2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:text="Selecciona un color"
+                            android:textColor="#FFACA6"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:text="Estilo"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+                        <Spinner
+                            android:id="@+id/spEstiloTratamiento2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tvEstiloTratamiento2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:text="Selecciona un color"
+                            android:textColor="#FFACA6"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                    <!--Fin de spinner de tratamiento-->
+
+                    <CheckBox
+                        android:id="@+id/cbTratamientoOtro2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:text="Otro" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:id="@+id/etOtroTratamientoNuevoHistorial2"
+                        android:inputType="text"
+                        android:hint="Otro"
+                        android:enabled="false"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="20"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Campo vacío"
+                        android:id="@+id/tvOtroTratamientoNuevoHistorial2"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFACA6"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:id="@+id/etPrecioTratamientoNuevoHistorial2"
+                        android:hint="Precio/Costo"
+                        android:inputType="numberDecimal"
+                        android:enabled="false"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="10"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Campo vacío"
+                        android:id="@+id/tvPrecioTratamientoNuevoHistorial2"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFACA6"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Material y Tratamiento  -->
+
+            <!--  Tipo de bifocal  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tipo de bifocal"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#0AA09E"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:id="@+id/tvTipoBifocalNuevoHistorial"/>
+
+                    <RadioGroup
+                        android:id="@+id/rgTipoBifocalNuevoHistorial2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rbBlend2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Blend"
+                            android:layout_weight="1"/>
+
+                        <RadioButton
+                            android:id="@+id/rbFT2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="FT"
+                            android:layout_weight="1"/>
+
+                        <RadioButton
+                            android:id="@+id/rbNA2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="N/A"
+                            android:layout_weight="1"/>
+
+                        <RadioButton
+                            android:id="@+id/rbProgresivo2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Progresivo"
+                            android:layout_weight="1"/>
+
+                        <RadioButton
+                            android:id="@+id/rbOtroBifocal2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="Otro" />
+
+                    </RadioGroup>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:id="@+id/etOtroBifocalNuevoHistorial2"
+                        android:inputType="text"
+                        android:hint="Otro"
+                        android:enabled="false"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="20"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Campo vacío"
+                        android:id="@+id/tvOtroBifocalNuevoHistorial2"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFACA6"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:id="@+id/etPrecioBifocalNuevoHistorial2"
+                        android:hint="Precio/Costo"
+                        android:inputType="numberDecimal"
+                        android:enabled="false"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="10"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Campo vacío"
+                        android:id="@+id/tvPrecioBifocalNuevoHistorial2"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFACA6"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Selecciona al menos una opcion"
+                        android:id="@+id/tvTipoBifocalNuevoHistorial2"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFACA6"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Tipo de bifocal  -->
+
+            <!--  Observaciones laboratorio  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Observaciones laboratorio"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:id="@+id/etObservacionesNuevoHistorial2"
+                        android:inputType="text"
+                        android:hint="Observaciones laboratorio"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="250"
+                        android:digits="áéíóúÁÉÍÓÚüÜabcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789 "/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Observaciones laboratorio  -->
+
+            <!--  Observaciones interno  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Observaciones interno"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:lines="1"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:id="@+id/etObservacionesInternoNuevoHistorial2"
+                        android:inputType="text"
+                        android:hint="Observaciones interno"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="250"
+                        android:digits="áéíóúÁÉÍÓÚüÜabcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789 "/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--  Termina Observaciones interno  -->
+
+        </LinearLayout>
+        <!-- Termina LinearLayout Principal  -->
+
+    </ScrollView>
+
+    <!-- Botones  -->
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/llBontones2"
+        android:background="#000000">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Regresar"
+            android:textSize="15dp"
+            android:textColor="#ffffff"
+            android:id="@+id/btnRegresarHistorialNuevo2"
+            android:layout_weight="1"
+            android:visibility="gone"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Crear"
+            android:textSize="15dp"
+            android:textColor="#ffffff"
+            android:id="@+id/btnGuardarHistorialNuevo2"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+    <!-- Fin Botones  -->
+
+</RelativeLayout>

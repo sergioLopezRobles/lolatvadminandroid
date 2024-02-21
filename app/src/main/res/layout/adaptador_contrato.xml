@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    >
+
+    <TextView
+        android:textAlignment="center"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvEnviadoPaginaClienteContrato"
+        android:text="E"
+        android:textSize="15sp"
+        android:textColor="#0AA09E"
+        android:maxLines="1"
+        android:lines="1"
+        android:visibility="gone"
+        android:background="@drawable/textview_border"
+        />
+
+    <TextView
+        android:textAlignment="center"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvFormaPagoClienteContrato"
+        android:text="P"
+        android:textSize="15sp"
+        android:textColor="#0AA09E"
+        android:maxLines="1"
+        android:lines="1"
+        android:background="@drawable/textview_border"
+        />
+
+    <TextView
+        android:id="@+id/tvDiasAtrasoContrato"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="D. A"
+        android:textSize="15sp"
+        android:textColor="#0AA09E"
+        android:maxLines="1"
+        android:lines="1"
+        android:background="@drawable/textview_border"/>
+
+    <TextView
+        android:textAlignment="textStart"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvIdContrato"
+        android:text="CONTRATO"
+        android:textSize="15sp"
+        android:textColor="#0AA09E"
+        android:maxLength="15"
+        android:background="@drawable/textview_border"/>
+
+    <TextView
+        android:textAlignment="textStart"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvIdContratoPorAsignar"
+        android:text="POR ASIGNAR"
+        android:textSize="15sp"
+        android:textColor="#0AA09E"
+        android:maxLength="15"
+        android:visibility="gone"
+        android:background="@drawable/textview_border"/>
+
+    <TextView
+        android:textAlignment="textStart"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLocalidadClienteContrato"
+        android:text="LOCALIDAD"
+        android:textSize="15sp"
+        android:textColor="#0AA09E"
+        android:maxLines="1"
+        android:lines="1"
+        android:background="@drawable/textview_border"/>
+
+    <TextView
+        android:textAlignment="textStart"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvColoniaClienteContrato"
+        android:text="COLONIA"
+        android:textSize="15sp"
+        android:textColor="#0AA09E"
+        android:maxLines="1"
+        android:lines="1"
+        android:background="@drawable/textview_border"/>
+
+    <TextView
+        android:textAlignment="textStart"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCalleClienteContrato"
+        android:text="CALLE"
+        android:textSize="15sp"
+        android:textColor="#0AA09E"
+        android:maxLines="1"
+        android:lines="1"
+        android:background="@drawable/textview_border"/>
+
+    <TextView
+        android:textAlignment="textStart"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvNumeroClienteContrato"
+        android:text="#"
+        android:textSize="15sp"
+        android:textColor="#0AA09E"
+        android:maxLines="1"
+        android:lines="1"
+        android:background="@drawable/textview_border"/>
+
+    <TextView
+        android:textAlignment="textStart"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvNombreClienteContrato"
+        android:text="NOMBRE"
+        android:textSize="15sp"
+        android:textColor="#0AA09E"
+        android:maxLines="1"
+        android:lines="1"
+        android:background="@drawable/textview_border"/>
+
+    <TextView
+        android:textAlignment="textStart"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvUltimoAbonoContrato"
+        android:text="ULTIMO ABONO"
+        android:textSize="15sp"
+        android:textColor="#0AA09E"
+        android:maxLines="1"
+        android:lines="1"
+        android:background="@drawable/textview_border"/>
+
+    <TextView
+        android:textAlignment="textStart"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvNotaClienteContrato"
+        android:text="NOTA"
+        android:textSize="15sp"
+        android:textColor="#0AA09E"
+        android:maxLines="1"
+        android:lines="1"
+        android:background="@drawable/textview_border"/>
+
+    <TextView
+        android:textAlignment="center"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvObservacionesClienteContrato"
+        android:text="O"
+        android:textSize="15sp"
+        android:textColor="#0AA09E"
+        android:maxLines="1"
+        android:lines="1"
+        android:background="@drawable/textview_border"/>
+
+    <TextView
+        android:textAlignment="center"
+        android:layout_weight="1.3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvEsRutaClienteContrato"
+        android:text=""
+        android:textSize="15sp"
+        android:textColor="#0AA09E"
+        android:maxLines="1"
+        android:lines="1"
+        android:visibility="gone"/>
+
+    <TextView
+        android:textAlignment="center"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvEstadoContratoClienteContrato"
+        android:text=""
+        android:textSize="15sp"
+        android:textColor="#0AA09E"
+        android:visibility="gone"/>
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <TextView
+        android:textAlignment="center"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvContrato"
+        android:text="Contrato"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:maxLines="1"
+        android:lines="1" />
+
+    <TextView
+        android:textAlignment="center"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCalle"
+        android:text="Calle"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:maxLines="1"
+        android:lines="1" />
+
+    <TextView
+        android:textAlignment="center"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvNumero"
+        android:text="Numero"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:maxLines="1"
+        android:lines="1" />
+
+</LinearLayout>
